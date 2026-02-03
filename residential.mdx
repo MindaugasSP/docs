@@ -1,0 +1,314 @@
+---
+title: 'Residential'
+---
+
+# Quick Start
+
+Residential Proxy Quick Start
+
+> 📘 Decodo Proxies Use Endpoints
+>
+> * Endpoints are like gateways to IP pools.
+> * When you connect to an endpoint, your traffic is **automatically** routed through a random IP address from the Decodo IP pool.
+
+* Residential proxies use the following endpoint and port for random requests:
+
+```
+gate.decodo.com:7000
+```
+
+* Here are a few basic request examples in various programming languages:
+
+```curl
+curl -U 'USERNAME:PASSWORD' -x gate.decodo.com:7000 https://ip.decodo.com/
+```
+
+```python
+import requests
+url = 'https://ip.decodo.com/json'
+username = 'username'
+password = 'password'
+proxy = f"http://{username}:{password}@gate.decodo.com:7000"
+result = requests.get(url, proxies = {
+    'http': proxy,
+    'https': proxy
+})
+print(result.text)
+```
+
+```node
+const axios = require('axios');
+const { HttpsProxyAgent } = require('https-proxy-agent');
+
+const url = 'https://ip.decodo.com/json';
+const proxyAgent = new HttpsProxyAgent(
+  'http://username:password@gate.decodo.com:7000');
+
+axios
+  .get(url, {
+    httpsAgent: proxyAgent,
+  })
+  .then((response) => {
+    console.log(response.data);
+  });
+```
+
+```php
+<?php
+
+      $url = 'ip.decodo.com/json';
+      $proxy = 'gate.decodo.com';
+      $port = 7000;
+      $user = 'username';
+      $psw = 'password';
+
+      $ch = curl_init($url);
+      curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+      
+      curl_setopt($ch, CURLOPT_PROXY, "$proxy:$port");
+      curl_setopt($ch, CURLOPT_PROXYUSERPWD, "$user:$psw");
+      $result = curl_exec($ch);
+      curl_close($ch);
+
+      if ($result) {
+        echo $result . PHP_EOL;
+      }
+```
+
+```go
+package main
+
+import (
+    "log"
+    "net/http"
+    "net/url"
+)
+
+   func main() {
+     proxyUrl, err := url.Parse("http://username:password@gate.decodo.com:7000")
+     if err != nil {
+       log.Fatalln(err)
+     }
+
+     client := &http.Client{
+       Transport: &http.Transport{Proxy: http.ProxyURL(proxyUrl)},
+     }
+     req, err := http.NewRequest("GET", "https://ip.decodo.com/json", nil)
+     if err != nil {
+       log.Println(err)
+     }
+
+     res, err := client.Do(req)
+     log.Println(res)
+
+     if err != nil {
+       log.Println(err)
+     }
+   }
+```
+
+```java
+import java.net.*;
+import java.io.*;
+import java.util.Scanner;
+
+public class ProxyTest
+{
+   public static void main(String[] args) throws Exception
+   {
+  	InetSocketAddress proxyAddress = new InetSocketAddress("gate.decodo.com", 7000); // Set proxy IP/port.
+  	Proxy proxy = new Proxy(Proxy.Type.HTTP, proxyAddress);
+  	URL url = new URI("https://ip.decodo.com/").toURL(); //enter target URL
+  	Authenticator authenticator = new Authenticator() {
+     	public PasswordAuthentication getPasswordAuthentication() {
+        	return (new PasswordAuthentication("username","password".toCharArray())); //enter credentials
+     	}
+  	};
+
+
+  	Authenticator.setDefault(authenticator);
+   URLConnection urlConnection = url.openConnection(proxy);
+
+
+//Scanner to view output
+
+Scanner scanner = new Scanner(urlConnection.getInputStream());
+   System.out.println(scanner.nextLine());
+   scanner.close();
+
+   }
+}
+
+```
+
+> 📘 Control Your Connection
+>
+> * You can make this more specific by changing the endpoints and ports or by adding parameters to control the IP selection.
+> * Keep reading for a step-by-step walkthrough on specifying and generating more examples, or check out our **[Location](https://help.decodo.com/docs/residential-proxy-endpoints-and-ports/)**, and **[Advanced Parameters](https://help.decodo.com/docs/residential-proxy-advanced-parameters/)** articles for an even more in-depth look.
+
+***
+
+## Authentication
+
+1. First, navigate to the [**Residential → Proxy setup**](https://dashboard.decodo.com/residential-proxies/proxy-setup) page on your dashboard and look for the Authentication section.
+   * You’ll see that your first proxy user and password are created automatically.
+2. Next, select your proxy **authentication method**.
+   * This can be either your **whitelisted IP** address or one of your **proxy users**.
+
+<Image align="center" border={false} src="https://files.readme.io/cacaa113ee16f353bac01e2eb2cef73663a6c682cbaabb154f8657cc8fc1c595-Group_427323309.png" />
+
+<br />
+
+> 📘 Additional Authentication Options
+>
+> 1. You may **copy** your password by clicking on it
+>
+> 2. To see the password click the **eye** icon.
+>
+> 3. You can generate a new password by clicking on the **arrow icon** and choosing **Confirm**.
+>
+> 4. Here, you can also see the **used traffic** and **add a traffic limit** per proxy user, or check the used traffic sum of your whitelisted IPs.
+>
+> * You can further manage your credentials in the **Authentication** tab. For more details, check out the [**Authentication Methods**](https://help.decodo.com/docs/residential-proxy-authentication-methods) article.
+
+<Image align="center" border={false} width="400px" src="https://files.readme.io/4c5e7b6ae82cdd0617893c4fb45780af7c53f4e90a5132fb1b6cab8e8320cd46-Group_427323202.png" />
+
+<br />
+
+## Proxy Setup
+
+In the Residential Proxy Setup section of your dashboard, selecting various parameters will generate examples you can easily copy into your applications, tools, or code.
+
+1. On the [**Residential → Residential → Proxy setup**](https://dashboard.decodo.com/residential-proxies/proxy-setup) page, find the parameter selection section below your authentication methods.
+
+<Image align="center" border={false} src="https://files.readme.io/706bec1a7bc3015a6888e025d1211bd68617622811c04b72563d853aad0707de-Group_427323311.png" />
+
+<br />
+
+### Location
+
+2. First, select the **[Location](https://help.decodo.com/docs/residential-proxy-endpoints-and-ports)** of your proxy.
+
+> 📘 `Zip Code` Targeting
+>
+> * Available only when the **`USA`** `country` is selected; `Continent`, `State` or `City` options are unsupported.
+
+> 📘 `ASN` Targeting
+>
+> * You can specify an **`ASN`** once you select a **Country**.
+> * You must choose between **city**, **state**, **continent**, or **`Zip Code`** targeting and **`ASN`** targeting, as they can’t be used simultaneously.
+> * Find out more **[here](https://help.decodo.com/docs/residential-proxy-user-pass-requests#asn-targeting)**.
+
+<Image align="center" border={false} width="550px" src="https://files.readme.io/eb0ed3d40a447cf096d1b29c2a1985d4e7b988d6214de6d8a7e19e23b5bd3123-Group_427323513.png" />
+
+<br />
+
+### Session Type
+
+3. Afterward, select your preferred [**Session Type**](https://help.decodo.com/docs/residential-proxy-session-types), **Rotating** or **Sticky**.
+
+> 📘 Sticky Sessions
+>
+> * Using a sticky session, your IP will stay the same until the session expires.
+>
+> :warning: However, the longer the session you have, the more chances there are that **the IP will rotate before** your specified time due to the residential device at the end going offline.
+>
+> * Sessions of up to **24 hours** can be selected or specified from the drop-down menu in the dashboard for both **`user:pass`** and **`Whitelisted IP`** authentication methods.
+> * However, the **Whitelisted IP** **[session control option](https://help.decodo.com/docs/residential-proxy-whitelisted-ip-requests#sticky-session)** is supported only by the `HTTPS` protocol.
+
+<Image align="center" border={false} width="400px" src="https://files.readme.io/da1e795619ed16ee346fbeba85cfb59e2cc9152a3dbf2f0f652db575893a6d6e-Group_427323209.png" />
+
+<br />
+
+### Protocol
+
+4. Finally, choose the **[Protocol](https://help.decodo.com/docs/residential-proxy-protocols)** format. `Endpoint:port`, `HTTP`, `HTTPS`, and `SOCKS5` options are available.
+
+> 🚧 SOCKS5 Country Endpoint and Tool Support
+>
+> * `SOCKS5` [**requires advanced parameters**](https://help.decodo.com/docs/residential-proxy-protocols#socks5) to target **specific locations**.
+> * To get a sticky `SOCKS5` proxy in a **tool**, you must use a `session` parameter, otherwise, the proxy will always rotate even with a `sessionduration` parameter.
+
+<Image align="center" border={false} width="400px" src="https://files.readme.io/67dd55fa3eb3fe26fc0b94a16a48b2b2b3c7e48e790f8303cddc8c6e982a630f-Group_427323211.png" />
+
+<br />
+
+## Proxy List Examples
+
+Once you're done setting up in the Proxy Setup section, you will see a **proxy list** of generated endpoints and ports based on your selection.
+
+1. Simply **copy** it to your clipboard, or **download** a `.csv` or `.txt` file of the created proxy list.
+2. Alternatively, **copy** single elements of the generated parameters, such as the **Proxy Address**, **Port**, **Username**, and **Password**, or copy the entire example string.
+
+<Image align="center" border={false} src="https://files.readme.io/ad171ec38baa3f60f218c6ad9ddf4226b4901b2b37b8cef31998b816b67241b8-Group_427323214.png" />
+
+<br />
+
+> 📘 Endpoint List Control
+>
+> 1. You can set the **number** of generated endpoints.
+> 2. As well as how many of them you would like to display **per page** (`10`, `25`, `50`, or `100`).
+> 3. Hide your password by clicking on the **eye** icon. This will not affect the copy & paste function.
+> 4. Click **Switch view** at the top right under **Layout** to display the entire parameter string.
+
+<Image align="center" border={false} src="https://files.readme.io/f8c2a5ef054e1fd417d4b48a9e9ae6b2041769822e7b33a0c4fddc07d61931a5-Group_427323215.png" />
+
+<br />
+
+## Code Examples
+
+<ProxyCodeExamples />
+
+<Image align="center" border={false} src="https://files.readme.io/8f7a54f5dc1011a421bb76c12371c4a5404ae834e800b491525df1702915f8ce-Group_427323217.png" />
+
+<br />
+
+## Integration Guides
+
+Once you generate the endpoints and ports, you can apply them to any application or tool to start using proxies instantly.
+
+> 📘 Decodo Tools
+>
+> * Alternatively, you can use a dedicated Decodo tool — the **Decodo Extension** for **[Chrome](https://help.decodo.com/docs/decodo-chrome-extension#/)** and **[Firefox](https://help.decodo.com/docs/decodo-firefox-extension#/)**.
+
+> 📘 Integration Guides
+>
+> * Check out the most popular 3rd party tool guides in the [**Integrations overview**](https://help.decodo.com/docs/proxy-integrations-overview) section.
+
+> 📘 GitHub
+>
+> * For any **advanced code samples** and **middleware** please visit our [**GitHub**](https://github.com/decodo/decodo) page.
+
+<br />
+
+## Statistics
+
+To track residential proxy usage, navigate to the **[Residential → Residential → Usage statistics](https://dashboard.decodo.com/residential-proxies/statistics)** section.
+
+1. Here, you can view a **Graph** of **traffic** or **request** usage sorted by: **Location**, **User**, **Target**, **Protocol**, and choose the **time period**.
+2. Export **raw** or **table data** in `.CSV`, `.TXT`, or `.JSON` formats.
+
+* All dates are in `UTC`. Traffic history is limited to `180` days maximum.
+
+<Image align="center" border={false} src="https://files.readme.io/4941d5c4fca4ca9e2f450ddceef1875000fb76d171b6c78f5c75114ab3c8a85a-Group_427323614_1.png" />
+
+> 📘 Top Targets, Countries and Users
+>
+> * Below, you can see even more detailed information in dedicated sections:
+>   * **Top Targets**: Target, Traffic, Download, Upload, Requests, Spend (The total cost associated with the traffic).
+>   * **Top Countries**: Country, Traffic, Download, Upload, Requests, Spend.
+>   * **Top Users**: User, Traffic, Download, Upload, Requests, Spend.
+
+<Callout icon="📘" theme="info">
+  **[Here](https://help.decodo.com/docs/residential-proxy-statistics)** you can find a more comprehesive look at the **Residential Usage statistics** page.
+</Callout>
+
+<br />
+
+## Troubleshooting
+
+If you are experiencing any issues, please refer to our **[troubleshooting](https://help.decodo.com/docs/proxy-troubleshooting#/)** section or contact our support team directly, which is available **24/7**.
+
+***
+
+<SupportFeedback />
