@@ -9,73 +9,153 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "icon": "book-open-cover",
-          "href": "https://mintlify.com/docs"
-        },
-        {
-          "anchor": "Blog",
-          "icon": "newspaper",
-          "href": "https://mintlify.com/blog"
-        }
-      ]
-    },
-    "tabs": [
+    "languages": [
       {
-        "tab": "Guides",
-        "pages": [
-          "residential",
+        "language": "en",
+        "global": {
+          "anchors": [
+            {
+              "anchor": "Documentation",
+              "icon": "book-open-cover",
+              "href": "https://mintlify.com/docs"
+            },
+            {
+              "anchor": "Blog",
+              "icon": "newspaper",
+              "href": "https://mintlify.com/blog"
+            }
+          ]
+        },
+        "tabs": [
           {
-            "group": "Getting started",
+            "tab": "Guides",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
+              "residential",
+              {
+                "group": "Getting started",
+                "pages": [
+                  "index",
+                  "quickstart",
+                  "development"
+                ]
+              },
+              {
+                "group": "Customization",
+                "pages": [
+                  "essentials/settings",
+                  "essentials/navigation"
+                ]
+              },
+              {
+                "group": "Writing content",
+                "pages": [
+                  "essentials/markdown",
+                  "essentials/code",
+                  "essentials/images",
+                  "essentials/reusable-snippets"
+                ]
+              },
+              {
+                "group": "AI tools",
+                "pages": [
+                  "ai-tools/cursor",
+                  "ai-tools/claude-code",
+                  "ai-tools/windsurf"
+                ]
+              }
             ]
           },
           {
-            "group": "Customization",
-            "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
-          {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+            "tab": "API reference",
+            "groups": [
+              {
+                "group": "API documentation",
+                "pages": [
+                  "api-reference/introduction"
+                ]
+              },
+              {
+                "group": "Your API Endpoints",
+                "openapi": "/api-reference/jero_public_api.yaml",
+                "pages": [
+                  "api-reference/*"
+                ]
+              }
             ]
           }
         ]
       },
       {
-        "tab": "API reference",
-        "groups": [
+        "language": "cn",
+        "global": {
+          "anchors": [
+            {
+              "anchor": "文档",
+              "icon": "book-open-cover",
+              "href": "https://mintlify.com/docs"
+            },
+            {
+              "anchor": "博客",
+              "icon": "newspaper",
+              "href": "https://mintlify.com/blog"
+            }
+          ]
+        },
+        "tabs": [
           {
-            "group": "API documentation",
+            "tab": "指南",
             "pages": [
-              "api-reference/introduction"
+              "cn/residential",
+              {
+                "group": "入门",
+                "pages": [
+                  "index",
+                  "quickstart",
+                  "development"
+                ]
+              },
+              {
+                "group": "自定义",
+                "pages": [
+                  "essentials/settings",
+                  "essentials/navigation"
+                ]
+              },
+              {
+                "group": "编写内容",
+                "pages": [
+                  "essentials/markdown",
+                  "essentials/code",
+                  "essentials/images",
+                  "essentials/reusable-snippets"
+                ]
+              },
+              {
+                "group": "AI 工具",
+                "pages": [
+                  "ai-tools/cursor",
+                  "ai-tools/claude-code",
+                  "ai-tools/windsurf"
+                ]
+              }
             ]
           },
           {
-            "group": "Your API Endpoints",
-            "openapi": "/api-reference/jero_public_api.yaml",
-            "pages": [
-              "api-reference/*"
+            "tab": "API 参考",
+            "groups": [
+              {
+                "group": "API 文档",
+                "pages": [
+                  "api-reference/introduction"
+                ]
+              },
+              {
+                "group": "您的 API 端点",
+                "openapi": "/api-reference/jero_public_api.yaml",
+                "pages": [
+                  "api-reference/*"
+                ]
+              }
             ]
           }
         ]
