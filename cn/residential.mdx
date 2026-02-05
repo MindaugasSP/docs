@@ -1,0 +1,288 @@
+---
+title: "住宅代理"
+---
+
+# 快速开始
+
+住宅代理快速开始
+
+> 📘 Decodo 代理使用端点
+>
+> - 端点就像通往 IP 池的网关。
+> - 当您连接到端点时，您的流量会**自动**通过 Decodo IP 池中的随机 IP 地址进行路由。
+
+- 住宅代理使用以下端点和端口进行随机请求：
+
+```
+gate.decodo.com:7000
+```
+
+- 以下是各种编程语言的基本请求示例：
+
+```curl
+curl -U 'USERNAME:PASSWORD' -x gate.decodo.com:7000 https://ip.decodo.com/
+```
+
+```python
+import requests
+url = 'https://ip.decodo.com/json'
+username = 'username'
+password = 'password'
+proxy = f"http://{username}:{password}@gate.decodo.com:7000"
+result = requests.get(url, proxies = {
+    'http': proxy,
+    'https': proxy
+})
+print(result.text)
+```
+
+```node
+const axios = require('axios');
+const { HttpsProxyAgent } = require('https-proxy-agent');
+
+const url = 'https://ip.decodo.com/json';
+const proxyAgent = new HttpsProxyAgent(
+  'http://username:password@gate.decodo.com:7000');
+
+axios
+  .get(url, {
+    httpsAgent: proxyAgent,
+  })
+  .then((response) => {
+    console.log(response.data);
+  });
+```
+
+```php
+<?php
+
+      $url = 'ip.decodo.com/json';
+      $proxy = 'gate.decodo.com';
+      $port = 7000;
+      $user = 'username';
+      $psw = 'password';
+
+      $ch = curl_init($url);
+      curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+      
+      curl_setopt($ch, CURLOPT_PROXY, "$proxy:$port");
+      curl_setopt($ch, CURLOPT_PROXYUSERPWD, "$user:$psw");
+      $result = curl_exec($ch);
+      curl_close($ch);
+
+      if ($result) {
+        echo $result . PHP_EOL;
+      }
+```
+
+```go
+package main
+
+import (
+    "log"
+    "net/http"
+    "net/url"
+)
+
+   func main() {
+     proxyUrl, err := url.Parse("http://username:password@gate.decodo.com:7000")
+     if err != nil {
+       log.Fatalln(err)
+     }
+
+     client := &http.Client{
+       Transport: &http.Transport{Proxy: http.ProxyURL(proxyUrl)},
+     }
+     req, err := http.NewRequest("GET", "https://ip.decodo.com/json", nil)
+     if err != nil {
+       log.Println(err)
+     }
+
+     res, err := client.Do(req)
+     log.Println(res)
+
+     if err != nil {
+       log.Println(err)
+     }
+   }
+```
+
+```java
+import java.net.*;
+import java.io.*;
+import java.util.Scanner;
+
+public class ProxyTest
+{
+   public static void main(String[] args) throws Exception
+   {
+  	InetSocketAddress proxyAddress = new InetSocketAddress("gate.decodo.com", 7000); // Set proxy IP/port.
+  	Proxy proxy = new Proxy(Proxy.Type.HTTP, proxyAddress);
+  	URL url = new URI("https://ip.decodo.com/").toURL(); //enter target URL
+  	Authenticator authenticator = new Authenticator() {
+     	public PasswordAuthentication getPasswordAuthentication() {
+        	return (new PasswordAuthentication("username","password".toCharArray())); //enter credentials
+     	}
+  	};
+
+
+  	Authenticator.setDefault(authenticator);
+   URLConnection urlConnection = url.openConnection(proxy);
+
+
+//Scanner to view output
+
+Scanner scanner = new Scanner(urlConnection.getInputStream());
+   System.out.println(scanner.nextLine());
+   scanner.close();
+
+   }
+}
+```
+
+> 📘 控制您的连接
+>
+> - 您可以通过更改端点和端口或添加参数来控制 IP 选择，使其更加具体。
+> - 继续阅读以获取有关指定和生成更多示例的分步指南，或查看我们的[**位置**](https://help.decodo.com/docs/residential-proxy-endpoints-and-ports/)和[**高级参数**](https://help.decodo.com/docs/residential-proxy-advanced-parameters/)文章以获得更深入的了解。
+
+---
+
+## 身份验证
+
+1. 首先，导航到仪表板上的[**住宅代理 → 代理设置**](https://dashboard.decodo.com/residential-proxies/proxy-setup)页面，查找身份验证部分。
+   - 您会看到您的第一个代理用户和密码已自动创建。
+2. 接下来，选择您的代理**身份验证方法**。
+   - 这可以是您的**白名单 IP** 地址或您的**代理用户**之一。
+
+<br />
+
+> 📘 其他身份验证选项
+>
+> 1. 您可以通过点击来**复制**您的密码
+> 2. 要查看密码，请点击**眼睛**图标。
+> 3. 您可以通过点击**箭头图标**并选择**确认**来生成新密码。
+> 4. 在这里，您还可以查看每个代理用户的**已用流量**和**添加流量限制**，或检查白名单 IP 的已用流量总和。
+>
+> - 您可以在**身份验证**选项卡中进一步管理您的凭据。有关更多详细信息，请查看[**身份验证方法**](https://help.decodo.com/docs/residential-proxy-authentication-methods)文章。
+
+<br />
+
+## 代理设置
+
+在仪表板的住宅代理设置部分，选择各种参数将生成您可以轻松复制到应用程序、工具或代码中的示例。
+
+1. 在[**住宅代理 → 住宅代理 → 代理设置**](https://dashboard.decodo.com/residential-proxies/proxy-setup)页面上，在身份验证方法下方找到参数选择部分。
+
+<br />
+
+### 位置
+
+2. 首先，选择代理的[**位置**](https://help.decodo.com/docs/residential-proxy-endpoints-and-ports)。
+
+> 📘 `邮政编码`定位
+>
+> - 仅在选择**`美国`**`国家`时可用；不支持`大陆`、`州`或`城市`选项。
+
+> 📘 `ASN`定位
+>
+> - 选择**国家**后，您可以指定**`ASN`**。
+> - 您必须在**城市**、**州**、**大陆**或**`邮政编码`**定位与**`ASN`**定位之间进行选择，因为它们不能同时使用。
+> - 在[**这里**](https://help.decodo.com/docs/residential-proxy-user-pass-requests#asn-targeting)了解更多信息。
+
+<br />
+
+### 会话类型
+
+3. 之后，选择您首选的[**会话类型**](https://help.decodo.com/docs/residential-proxy-session-types)，**轮换**或**粘性**。
+
+> 📘 粘性会话
+>
+> - 使用粘性会话，您的 IP 将保持不变，直到会话过期。
+>
+> :warning: 但是，会话时间越长，由于末端的住宅设备离线，**IP 在您指定的时间之前轮换**的机会就越大。
+>
+> - 对于**`用户:密码`**和**`白名单 IP`**身份验证方法，可以从仪表板的下拉菜单中选择或指定最多**24 小时**的会话。
+> - 但是，**白名单 IP** [**会话控制选项**](https://help.decodo.com/docs/residential-proxy-whitelisted-ip-requests#sticky-session)仅受`HTTPS`协议支持。
+
+<br />
+
+### 协议
+
+4. 最后，选择[**协议**](https://help.decodo.com/docs/residential-proxy-protocols)格式。可用选项包括`端点:端口`、`HTTP`、`HTTPS`和`SOCKS5`。
+
+> 🚧 SOCKS5 国家端点和工具支持
+>
+> - `SOCKS5` [**需要高级参数**](https://help.decodo.com/docs/residential-proxy-protocols#socks5)来定位**特定位置**。
+> - 要在**工具**中获取粘性`SOCKS5`代理，您必须使用`session`参数，否则即使使用`sessionduration`参数，代理也会始终轮换。
+
+<br />
+
+## 代理列表示例
+
+在代理设置部分完成设置后，您将看到根据您的选择生成的端点和端口的**代理列表**。
+
+1. 只需将其**复制**到剪贴板，或**下载**创建的代理列表的`.csv`或`.txt`文件。
+2. 或者，**复制**生成参数的单个元素，例如**代理地址**、**端口**、**用户名**和**密码**，或复制整个示例字符串。
+
+<br />
+
+> 📘 端点列表控制
+>
+> 1. 您可以设置生成端点的**数量**。
+> 2. 以及您希望**每页**显示多少个端点（`10`、`25`、`50`或`100`）。
+> 3. 通过点击**眼睛**图标隐藏您的密码。这不会影响复制和粘贴功能。
+> 4. 点击**布局**下右上角的**切换视图**以显示整个参数字符串。
+
+<br />
+
+## 代码示例
+
+<ProxyCodeExamples />
+
+<br />
+
+## 集成指南
+
+生成端点和端口后，您可以将它们应用于任何应用程序或工具，立即开始使用代理。
+
+> 📘 Decodo 工具
+>
+> - 或者，您可以使用专用的 Decodo 工具 — 适用于[**Chrome**](https://help.decodo.com/docs/decodo-chrome-extension#/)和[**Firefox**](https://help.decodo.com/docs/decodo-firefox-extension#/)的**Decodo 扩展**。
+
+> 📘 集成指南
+>
+> - 在[**集成概述**](https://help.decodo.com/docs/proxy-integrations-overview)部分查看最受欢迎的第三方工具指南。
+
+> 📘 GitHub
+>
+> - 有关任何**高级代码示例**和**中间件**，请访问我们的[**GitHub**](https://github.com/decodo/decodo)页面。
+
+<br />
+
+## 统计信息
+
+要跟踪住宅代理使用情况，请导航到[**住宅代理 → 住宅代理 → 使用统计**](https://dashboard.decodo.com/residential-proxies/statistics)部分。
+
+1. 在这里，您可以查看按以下方式排序的**流量**或**请求**使用情况的**图表**：**位置**、**用户**、**目标**、**协议**，并选择**时间段**。
+2. 以`.CSV`、`.TXT`或`.JSON`格式导出**原始**或**表格数据**。
+
+- 所有日期均为`UTC`。流量历史记录最多限制为`180`天。
+
+> 📘 热门目标、国家和用户
+>
+> - 在下方，您可以在专用部分中看到更详细的信息：
+>   - **热门目标**：目标、流量、下载、上传、请求、支出（与流量相关的总成本）。
+>   - **热门国家**：国家、流量、下载、上传、请求、支出。
+>   - **热门用户**：用户、流量、下载、上传、请求、支出。
+
+<Callout icon="📘">
+  [**这里**](https://help.decodo.com/docs/residential-proxy-statistics)您可以更全面地了解**住宅代理使用统计**页面。
+</Callout>
+
+<br />
+
+## 故障排除
+
+如果您遇到任何问题，请参阅我们的[**故障排除**](https://help.decodo.com/docs/proxy-troubleshooting#/)部分或直接联系我们的支持团队，我们提供**24/7**全天候服务。
+
+---
