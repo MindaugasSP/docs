@@ -30,6 +30,7 @@
           {
             "tab": "Guides",
             "pages": [
+              "untitled-page",
               "residential",
               {
                 "group": "Getting started",
