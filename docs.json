@@ -1,5 +1,11 @@
 {
   "$schema": "https://mintlify.com/docs.json",
+  "openapi": "/api-reference/jero_public_api.yaml",
+  "api": {
+    "playground": {
+      "mode": "simple"
+    }
+  },
   "theme": "mint",
   "name": "Mint Starter Kit",
   "colors": {
@@ -72,12 +78,9 @@
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "Your API Endpoints",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "api-reference/*"
             ]
           }
         ]
