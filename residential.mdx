@@ -3,7 +3,7 @@ title: "Residential"
 description: "Residential Proxy Quick Start"
 ---
 
-# Quick Start
+# Quick Start Guides to Chinese users
 
 Residential Proxy Quick Start
 
@@ -21,9 +21,11 @@ gate.decodo.com:7000
 - Here are a few basic request examples in various programming languages:
 
 <CodeGroup>
+
 ```curl
 curl -U 'USERNAME:PASSWORD' -x gate.decodo.com:7000 https://ip.decodo.com/
 ```
+
 
 ```python
 import requests
@@ -37,6 +39,7 @@ result = requests.get(url, proxies = {
 })
 print(result.text)
 ```
+
 
 ```node
 const axios = require('axios');
@@ -54,6 +57,7 @@ axios
     console.log(response.data);
   });
 ```
+
 
 ```php
 <?php
@@ -76,6 +80,7 @@ axios
         echo $result . PHP_EOL;
       }
 ```
+
 
 ```go
 package main
@@ -109,6 +114,7 @@ import (
    }
 ```
 
+
 ```java
 import java.net.*;
 import java.io.*;
@@ -141,6 +147,7 @@ Scanner scanner = new Scanner(urlConnection.getInputStream());
    }
 }
 ```
+
 </CodeGroup>
 
 > 📘 Control Your Connection

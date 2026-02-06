@@ -1,10 +1,10 @@
 ---
-title: "住宅代理"
+title: "动态住宅代理"
 ---
 
 # 快速开始
 
-住宅代理快速开始
+动态住宅代理快速开始
 
 > 📘 Decodo 代理使用端点
 >
@@ -154,8 +154,6 @@ Scanner scanner = new Scanner(urlConnection.getInputStream());
 2. 接下来，选择您的代理**身份验证方法**。
    - 这可以是您的**白名单 IP** 地址或您的**代理用户**之一。
 
-<br />
-
 > 📘 其他身份验证选项
 >
 > 1. 您可以通过点击来**复制**您的密码
@@ -165,15 +163,11 @@ Scanner scanner = new Scanner(urlConnection.getInputStream());
 >
 > - 您可以在**身份验证**选项卡中进一步管理您的凭据。有关更多详细信息，请查看[**身份验证方法**](https://help.decodo.com/docs/residential-proxy-authentication-methods)文章。
 
-<br />
-
 ## 代理设置
 
 在仪表板的住宅代理设置部分，选择各种参数将生成您可以轻松复制到应用程序、工具或代码中的示例。
 
 1. 在[**住宅代理 → 住宅代理 → 代理设置**](https://dashboard.decodo.com/residential-proxies/proxy-setup)页面上，在身份验证方法下方找到参数选择部分。
-
-<br />
 
 ### 位置
 
@@ -181,15 +175,13 @@ Scanner scanner = new Scanner(urlConnection.getInputStream());
 
 > 📘 `邮政编码`定位
 >
-> - 仅在选择**`美国`**`国家`时可用；不支持`大陆`、`州`或`城市`选项。
+> - 仅在选择\*\*`美国`\*\*`国家`时可用；不支持`大陆`、`州`或`城市`选项。
 
 > 📘 `ASN`定位
 >
-> - 选择**国家**后，您可以指定**`ASN`**。
-> - 您必须在**城市**、**州**、**大陆**或**`邮政编码`**定位与**`ASN`**定位之间进行选择，因为它们不能同时使用。
+> - 选择**国家**后，您可以指定\*\*`ASN`\*\*。
+> - 您必须在**城市**、**州**、**大陆**或\*\*`邮政编码`**定位与**`ASN`\*\*定位之间进行选择，因为它们不能同时使用。
 > - 在[**这里**](https://help.decodo.com/docs/residential-proxy-user-pass-requests#asn-targeting)了解更多信息。
-
-<br />
 
 ### 会话类型
 
@@ -201,10 +193,8 @@ Scanner scanner = new Scanner(urlConnection.getInputStream());
 >
 > :warning: 但是，会话时间越长，由于末端的住宅设备离线，**IP 在您指定的时间之前轮换**的机会就越大。
 >
-> - 对于**`用户:密码`**和**`白名单 IP`**身份验证方法，可以从仪表板的下拉菜单中选择或指定最多**24 小时**的会话。
+> - 对于\*\*`用户:密码`**和**`白名单 IP`**身份验证方法，可以从仪表板的下拉菜单中选择或指定最多**24 小时\*\*的会话。
 > - 但是，**白名单 IP** [**会话控制选项**](https://help.decodo.com/docs/residential-proxy-whitelisted-ip-requests#sticky-session)仅受`HTTPS`协议支持。
-
-<br />
 
 ### 协议
 
@@ -215,16 +205,12 @@ Scanner scanner = new Scanner(urlConnection.getInputStream());
 > - `SOCKS5` [**需要高级参数**](https://help.decodo.com/docs/residential-proxy-protocols#socks5)来定位**特定位置**。
 > - 要在**工具**中获取粘性`SOCKS5`代理，您必须使用`session`参数，否则即使使用`sessionduration`参数，代理也会始终轮换。
 
-<br />
-
 ## 代理列表示例
 
 在代理设置部分完成设置后，您将看到根据您的选择生成的端点和端口的**代理列表**。
 
 1. 只需将其**复制**到剪贴板，或**下载**创建的代理列表的`.csv`或`.txt`文件。
 2. 或者，**复制**生成参数的单个元素，例如**代理地址**、**端口**、**用户名**和**密码**，或复制整个示例字符串。
-
-<br />
 
 > 📘 端点列表控制
 >
@@ -233,13 +219,9 @@ Scanner scanner = new Scanner(urlConnection.getInputStream());
 > 3. 通过点击**眼睛**图标隐藏您的密码。这不会影响复制和粘贴功能。
 > 4. 点击**布局**下右上角的**切换视图**以显示整个参数字符串。
 
-<br />
-
 ## 代码示例
 
 <ProxyCodeExamples />
-
-<br />
 
 ## 集成指南
 
@@ -256,8 +238,6 @@ Scanner scanner = new Scanner(urlConnection.getInputStream());
 > 📘 GitHub
 >
 > - 有关任何**高级代码示例**和**中间件**，请访问我们的[**GitHub**](https://github.com/decodo/decodo)页面。
-
-<br />
 
 ## 统计信息
 
@@ -278,8 +258,6 @@ Scanner scanner = new Scanner(urlConnection.getInputStream());
 <Callout icon="📘">
   [**这里**](https://help.decodo.com/docs/residential-proxy-statistics)您可以更全面地了解**住宅代理使用统计**页面。
 </Callout>
-
-<br />
 
 ## 故障排除
 
