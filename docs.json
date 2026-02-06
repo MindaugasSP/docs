@@ -106,6 +106,7 @@
           {
             "tab": "指南",
             "pages": [
+              "cn/authentication",
               "cn/residential",
               {
                 "group": "入门",
