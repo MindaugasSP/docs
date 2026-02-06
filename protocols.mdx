@@ -1,0 +1,81 @@
+---
+title: 'Protocols'
+---
+
+# Protocols
+
+Residential Proxy Support for HTTP, HTTPS, and SOCKS5 Formats
+
+The connection protocol (HTTP, HTTPS, or SOCKS5) can be specified in the tool or program you're using to connect with the proxies.
+
+In the following `cURL` examples, the protocol is specified at the beginning of the proxy line, just replace the `username` and `password` with your proxy user credentials, and run them in your Terminal or Command Prompt.
+
+## HTTP
+
+Here is a `cURL` example for the `HTTP` protocol:
+
+```curl cURL
+curl -x "http://username:password@gate.decodo.com:7000" "https://ip.decodo.com/json"
+```
+
+## HTTPS
+
+Using this protocol will **encrypt** your connection. Here is a `cURL` example for the `HTTPS` protocol:
+
+```curl
+curl -x "https://username:password@gate.decodo.com:7000" "https://ip.decodo.com/json"
+```
+
+## SOCKS5
+
+Here is a `cURL` command for the `SOCKS5` protocol:
+
+```curl cURL
+curl -x "socks5h://user-username-session-1:password@gate.decodo.com:7000" "https://ip.decodo.com/json"
+```
+
+<Callout icon="📘" theme="info">
+  The letter `h` in `socks5h://` means that the hostname will be resolved on the proxy side, and not locally.
+</Callout>
+
+> 🚧 Country Endpoint Support
+>
+> Note that you have to use the `gate.decodo.com` endpoint to use `SOCKS5`. Country endpoints like `us.decodo.com` will not work!
+>
+> You can instead target specific locations by specifying the location using **[Advanced Parameters](https://help.decodo.com/docs/residential-proxy-advanced-parameters#/)**. For example, this `cURL` command targets the US location:
+>
+> ```curl cURL
+> curl -U "user-username-country-us:password" -x "socks5h://gate.decodo.com:7000" "https://ip.decodo.com/json"
+> ```
+
+> 🚧 Tool Support
+>
+> * To get a sticky `SOCKS5` proxy in a **tool**, you must use a `session` parameter, otherwise, the proxy will always rotate even with a `sessionduration` parameter.
+> * The **session ID** can be defined by any string of your choice. More on that can be found on the [**Advanced Parameters**](https://help.decodo.com/docs/residential-proxy-advanced-parameters) page in the **Sticky session** section.
+
+***
+
+## Ports
+
+Easily understand which ports you can access when using our proxies, including details on the default accessible ports, restrictions, and how to request a port to be unblocked.
+
+### Accessible Ports
+
+With the **residential** and **mobile** proxies, the following ports are accessible by default:
+
+* `80`
+* `443`
+
+### Restricted Ports
+
+Restricted ports include **`SMTP`**, **`IMAP`**, and other **mailing** and **messaging** related ports.
+
+### Port Unblocking Process
+
+To request for port unblock, contact us at [**compliance@decodo.com**](mailto:compliance@decodo.com) and provide the following information:
+
+* The **port** that needs to be unblocked.
+* Describe the **use case** with that port – **be as specific as possible**.
+* Provide the **target** that you’ll access using the mentioned port.
+
+For added security, particularly for requests involving sensitive or high-risk ports, we’ll require the user to provide **company details** or complete ID verification to complete the unblocking request.
