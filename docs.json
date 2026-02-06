@@ -107,6 +107,7 @@
           {
             "tab": "指南",
             "pages": [
+              "cn/protocols",
               "cn/residential",
               {
                 "group": "入门",
