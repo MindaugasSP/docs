@@ -1,0 +1,81 @@
+---
+title: '协议'
+---
+
+# 协议
+
+住宅代理支持 HTTP、HTTPS 和 SOCKS5 格式
+
+连接协议（HTTP、HTTPS 或 SOCKS5）可以在您用于连接代理的工具或程序中指定。
+
+在以下 `cURL` 示例中，协议在代理行的开头指定，只需将 `username` 和 `password` 替换为您的代理用户凭据，然后在终端或命令提示符中运行它们。
+
+## HTTP
+
+以下是 `HTTP` 协议的 `cURL` 示例：
+
+```curl cURL
+curl -x "http://username:password@gate.decodo.com:7000" "https://ip.decodo.com/json"
+```
+
+## HTTPS
+
+使用此协议将**加密**您的连接。以下是 `HTTPS` 协议的 `cURL` 示例：
+
+```curl
+curl -x "https://username:password@gate.decodo.com:7000" "https://ip.decodo.com/json"
+```
+
+## SOCKS5
+
+以下是 `SOCKS5` 协议的 `cURL` 命令：
+
+```curl cURL
+curl -x "socks5h://user-username-session-1:password@gate.decodo.com:7000" "https://ip.decodo.com/json"
+```
+
+<Callout icon="📘" theme="info">
+  `socks5h://` 中的字母 `h` 表示主机名将在代理端解析，而不是在本地解析。
+</Callout>
+
+> 🚧 国家端点支持
+>
+> 请注意，您必须使用 `gate.decodo.com` 端点来使用 `SOCKS5`。像 `us.decodo.com` 这样的国家端点将无法工作！
+>
+> 您可以通过使用**[高级参数](https://help.decodo.com/docs/residential-proxy-advanced-parameters#/)**指定位置来定位特定位置。例如，此 `cURL` 命令定位美国位置：
+>
+> ```curl cURL
+> curl -U "user-username-country-us:password" -x "socks5h://gate.decodo.com:7000" "https://ip.decodo.com/json"
+> ```
+
+> 🚧 工具支持
+>
+> * 要在**工具**中获取粘性 `SOCKS5` 代理，您必须使用 `session` 参数，否则即使使用 `sessionduration` 参数，代理也会始终轮换。
+> * **会话 ID** 可以由您选择的任何字符串定义。更多信息可以在**[高级参数](https://help.decodo.com/docs/residential-proxy-advanced-parameters)**页面的**粘性会话**部分找到。
+
+***
+
+## 端口
+
+轻松了解使用我们的代理时可以访问哪些端口，包括默认可访问端口的详细信息、限制以及如何请求解除端口封锁。
+
+### 可访问端口
+
+对于**住宅**和**移动**代理，默认情况下可以访问以下端口：
+
+* `80`
+* `443`
+
+### 受限端口
+
+受限端口包括 **`SMTP`**、**`IMAP`** 和其他**邮件**和**消息**相关端口。
+
+### 端口解封流程
+
+要请求解除端口封锁，请通过 [**compliance@decodo.com**](mailto:compliance@decodo.com) 联系我们并提供以下信息：
+
+* 需要解除封锁的**端口**。
+* 描述该端口的**使用场景** - **请尽可能具体**。
+* 提供您将使用所述端口访问的**目标**。
+
+为了增加安全性，特别是对于涉及敏感或高风险端口的请求，我们将要求用户提供**公司详细信息**或完成身份验证以完成解封请求。
