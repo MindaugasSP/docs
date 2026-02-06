@@ -107,6 +107,7 @@
           {
             "tab": "指南",
             "pages": [
+              "cn/authentication",
               "cn/protocols",
               "cn/residential",
               {
