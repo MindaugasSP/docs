@@ -1,8 +1,9 @@
 ---
 title: "动态住宅代理"
+description: "动态住宅代理快速开始"
 ---
 
-# 快速开始
+# 中文用户快速入门指南
 
 动态住宅代理快速开始
 
@@ -19,11 +20,14 @@ gate.decodo.com:7000
 
 - 以下是各种编程语言的基本请求示例：
 
-```curl
+<CodeGroup>
+
+```curl Curl
 curl -U 'USERNAME:PASSWORD' -x gate.decodo.com:7000 https://ip.decodo.com/
 ```
 
-```python
+
+```python Python
 import requests
 url = 'https://ip.decodo.com/json'
 username = 'username'
@@ -35,6 +39,7 @@ result = requests.get(url, proxies = {
 })
 print(result.text)
 ```
+
 
 ```node
 const axios = require('axios');
@@ -52,6 +57,7 @@ axios
     console.log(response.data);
   });
 ```
+
 
 ```php
 <?php
@@ -74,6 +80,7 @@ axios
         echo $result . PHP_EOL;
       }
 ```
+
 
 ```go
 package main
@@ -107,6 +114,7 @@ import (
    }
 ```
 
+
 ```java
 import java.net.*;
 import java.io.*;
@@ -139,6 +147,8 @@ Scanner scanner = new Scanner(urlConnection.getInputStream());
    }
 }
 ```
+
+</CodeGroup>
 
 > 📘 控制您的连接
 >
@@ -218,6 +228,10 @@ Scanner scanner = new Scanner(urlConnection.getInputStream());
 > 2. 以及您希望**每页**显示多少个端点（`10`、`25`、`50`或`100`）。
 > 3. 通过点击**眼睛**图标隐藏您的密码。这不会影响复制和粘贴功能。
 > 4. 点击**布局**下右上角的**切换视图**以显示整个参数字符串。
+
+## 代码示例
+
+<ProxyCodeExamples />
 
 ## 集成指南
 

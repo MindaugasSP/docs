@@ -1,0 +1,38 @@
+---
+title: 'Sapi parameters'
+---
+
+# Parameters
+
+Web Scraping API Parameters
+
+## Parameters supported by Web Scraping API solution
+
+<Callout icon="📘" theme="info">
+  Supported parameters differ for Core and Advanced plan users. Find a more detailed comparison **[here](https://help.decodo.com/docs/web-scraping-api-core-and-advanced-plans/)**.
+
+  Note that supported parameters may vary slightly depending on the target template. [Read more](https://help.decodo.com/docs/web-scraping-api-targets#/).
+</Callout>
+
+| Parameter | Default value | Description | Example | Core |
+|-----------|---------------|-------------|---------|------|
+| `url` or `query` | `null` | Mandatory. Some [**target templates**](https://help.decodo.com/docs/web-scraping-api-targets) support `query` parameter, otherwise `url` is required. | `https://ip.decodo.com` | ✅ Only `url` |
+| `target` | `null` | Necessary for specific [**target templates**](https://help.decodo.com/docs/web-scraping-api-targets#/) | `google_search` | |
+| `headless` | `null` Some target templates force JS rendering by default | `html` value enables JavaScript rendering. [Read more.](https://help.decodo.com/docs/web-scraping-api-javascript-rendering) `png` value enables screenshot response. [Read more.](https://help.decodo.com/docs/screenshot) | `html` | |
+| `geo` | auto-randomized | The geographical location on which the result depends. [**Read more**](https://help.decodo.com/docs/web-scraping-api-localisation). | `United States` | ✅ Supported geo locations: `US`, `CA`, `GB`, `DE`, `FR`, `NL`, `JP`, `RO` |
+| `domain` | `com` | Specify top-level domain: **com**, **co.uk**, **fr**, etc. | `com` | |
+| `locale` | Matched with `domain` parameter | This will change the search page web interface language (not the results). Example: – en-US – en-GB | `en-gb` | |
+| `headers` | `null` | Adds request headers to the target request. | `User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/<IP_ADDRESS> Safari/537.36` | |
+| `cookies` | `null` | Client cookie. Allows users to open up pages as if they are logged in. | `Cookie: sessionid=8e1f3b56-7abc-47e6-b2e2-1d273b0a1c4d; logged_in=true; locale=en-US` | |
+| `force_cookies` | `false` | By default, user-provided cookies are not forwarded to the target. Set this parameter to `true` to override this behaviour. | `true` | |
+| `force_headers` | `false` | By default, user-provided headers are not forwarded to the target. Set this parameter to `true` to override this behaviour. | `true` | |
+| `device_type` | `desktop` | Device type and browser. [Read more.](https://help.decodo.com/docs/device-types#/) | `desktop` | |
+| `parse` | `false` | For certain target templates dedicated parsers are available. To retrieve structured data, set `parse` parameter to `true`. [Read more.](https://help.decodo.com/update/docs/web-scraping-api-parsing#/) | `true` | |
+| `session_id` | `null` | Session to re-use the same IP for multiple requests for up to 10 minutes | `1234` | |
+| `http_method` | `GET` | Used to make a `POST` request instead of `GET`. | `POST` | ✅ |
+| `payload` | `null` | Base64 encoded `POST` request body. Used when `http_method` is `POST`. | `{foo: bar}` | ✅ |
+| `successful_status_codes` | `null` | Define one or more `HTTP` response codes you consider successful and want to get the content for. | `401`, `404` | ✅ |
+| `markdown` | `false` | Parses HTML output into Markdown. Results in less tokens when feeding results into LLM models. [Read more.](https://help.decodo.com/docs/scraper-api-markdown#/) | `true` | |
+| `xhr` | `false` | Retrieves a list of XHR and fetch requests. [Read more.](https://help.decodo.com/docs/fetch-and-xhr#/) | `true` | |
+
+***

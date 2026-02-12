@@ -30,6 +30,7 @@
           {
             "tab": "Guides",
             "pages": [
+              "sapi-parameters",
               "best-scraping-practices",
               "protocols",
               "authentication",
