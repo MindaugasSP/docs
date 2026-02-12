@@ -166,10 +166,20 @@ Scanner scanner = new Scanner(urlConnection.getInputStream());
 
 > 📘 Additional Authentication Options
 >
-> 1. You may **copy** your password by clicking on it
-> 2. To see the password click the **eye** icon.
-> 3. You can generate a new password by clicking on the **arrow icon** and choosing **Confirm**.
-> 4. Here, you can also see the **used traffic** and **add a traffic limit** per proxy user, or check the used traffic sum of your whitelisted IPs.
+> <Steps>
+>   <Step title="Copy password">
+>     You may **copy** your password by clicking on it
+>   </Step>
+>   <Step title="View password">
+>     To see the password click the **eye** icon.
+>   </Step>
+>   <Step title="Generate new password">
+>     You can generate a new password by clicking on the **arrow icon** and choosing **Confirm**.
+>   </Step>
+>   <Step title="Manage traffic">
+>     Here, you can also see the **used traffic** and **add a traffic limit** per proxy user, or check the used traffic sum of your whitelisted IPs.
+>   </Step>
+> </Steps>
 >
 > - You can further manage your credentials in the **Authentication** tab. For more details, check out the [**Authentication Methods**](https://help.decodo.com/docs/residential-proxy-authentication-methods) article.
 
@@ -177,11 +187,15 @@ Scanner scanner = new Scanner(urlConnection.getInputStream());
 
 In the Residential Proxy Setup section of your dashboard, selecting various parameters will generate examples you can easily copy into your applications, tools, or code.
 
-1. On the [**Residential → Residential → Proxy setup**](https://dashboard.decodo.com/residential-proxies/proxy-setup) page, find the parameter selection section below your authentication methods.
+<Steps>
+  <Step title="Find parameter selection">
+    On the [**Residential → Residential → Proxy setup**](https://dashboard.decodo.com/residential-proxies/proxy-setup) page, find the parameter selection section below your authentication methods.
+  </Step>
 
 ### Location
 
-2. First, select the [**Location**](https://help.decodo.com/docs/residential-proxy-endpoints-and-ports) of your proxy.
+  <Step title="Select location">
+    First, select the [**Location**](https://help.decodo.com/docs/residential-proxy-endpoints-and-ports) of your proxy.
 
 > 📘 `Zip Code` Targeting
 >
@@ -195,7 +209,8 @@ In the Residential Proxy Setup section of your dashboard, selecting various para
 
 ### Session Type
 
-3. Afterward, select your preferred [**Session Type**](https://help.decodo.com/docs/residential-proxy-session-types), **Rotating** or **Sticky**.
+  <Step title="Select session type">
+    Afterward, select your preferred [**Session Type**](https://help.decodo.com/docs/residential-proxy-session-types), **Rotating** or **Sticky**.
 
 > 📘 Sticky Sessions
 >
@@ -208,7 +223,10 @@ In the Residential Proxy Setup section of your dashboard, selecting various para
 
 ### Protocol
 
-4. Finally, choose the [**Protocol**](https://help.decodo.com/docs/residential-proxy-protocols) format. `Endpoint:port`, `HTTP`, `HTTPS`, and `SOCKS5` options are available.
+  <Step title="Choose protocol">
+    Finally, choose the [**Protocol**](https://help.decodo.com/docs/residential-proxy-protocols) format. `Endpoint:port`, `HTTP`, `HTTPS`, and `SOCKS5` options are available.
+  </Step>
+</Steps>
 
 > 🚧 SOCKS5 Country Endpoint and Tool Support
 >
@@ -219,15 +237,31 @@ In the Residential Proxy Setup section of your dashboard, selecting various para
 
 Once you're done setting up in the Proxy Setup section, you will see a **proxy list** of generated endpoints and ports based on your selection.
 
-1. Simply **copy** it to your clipboard, or **download** a `.csv` or `.txt` file of the created proxy list.
-2. Alternatively, **copy** single elements of the generated parameters, such as the **Proxy Address**, **Port**, **Username**, and **Password**, or copy the entire example string.
+<Steps>
+  <Step title="Copy or download proxy list">
+    Simply **copy** it to your clipboard, or **download** a `.csv` or `.txt` file of the created proxy list.
+  </Step>
+  <Step title="Copy individual parameters">
+    Alternatively, **copy** single elements of the generated parameters, such as the **Proxy Address**, **Port**, **Username**, and **Password**, or copy the entire example string.
+  </Step>
+</Steps>
 
 > 📘 Endpoint List Control
 >
-> 1. You can set the **number** of generated endpoints.
-> 2. As well as how many of them you would like to display **per page** (`10`, `25`, `50`, or `100`).
-> 3. Hide your password by clicking on the **eye** icon. This will not affect the copy & paste function.
-> 4. Click **Switch view** at the top right under **Layout** to display the entire parameter string.
+> <Steps>
+>   <Step title="Set number of endpoints">
+>     You can set the **number** of generated endpoints.
+>   </Step>
+>   <Step title="Set display per page">
+>     As well as how many of them you would like to display **per page** (`10`, `25`, `50`, or `100`).
+>   </Step>
+>   <Step title="Hide password">
+>     Hide your password by clicking on the **eye** icon. This will not affect the copy & paste function.
+>   </Step>
+>   <Step title="Switch view">
+>     Click **Switch view** at the top right under **Layout** to display the entire parameter string.
+>   </Step>
+> </Steps>
 
 ## Code Examples
 
@@ -253,8 +287,14 @@ Once you generate the endpoints and ports, you can apply them to any application
 
 To track residential proxy usage, navigate to the [**Residential → Residential → Usage statistics**](https://dashboard.decodo.com/residential-proxies/statistics) section.
 
-1. Here, you can view a **Graph** of **traffic** or **request** usage sorted by: **Location**, **User**, **Target**, **Protocol**, and choose the **time period**.
-2. Export **raw** or **table data** in `.CSV`, `.TXT`, or `.JSON` formats.
+<Steps>
+  <Step title="View usage graph">
+    Here, you can view a **Graph** of **traffic** or **request** usage sorted by: **Location**, **User**, **Target**, **Protocol**, and choose the **time period**.
+  </Step>
+  <Step title="Export data">
+    Export **raw** or **table data** in `.CSV`, `.TXT`, or `.JSON` formats.
+  </Step>
+</Steps>
 
 - All dates are in `UTC`. Traffic history is limited to `180` days maximum.
 
