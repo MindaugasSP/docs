@@ -1,0 +1,32 @@
+---
+title: "Scraping Practices"
+---
+
+# Best scraping practices using proxies
+
+<Note>
+  Decodo offers various Scraping API solutions with minimal effort for most use-cases. You can explore them [here](https://decodo.com/scraping).
+</Note>
+
+Web scraping requires careful execution to ensure consistency and efficiency. Here are some best practices for using proxies to enhance your scraping success:
+
+1. **Choose the Right Proxy Type**\
+   Residential Proxies: Ideal for mimicking real user behavior and reducing the chances of being blocked. These proxies use IP addresses from real devices, making them appear more legitimate. Mobile Proxies: Simulate mobile user behavior using IPs from mobile carriers, reducing detection and bypassing geo-restrictions. Datacenter Proxies: High-speed and reliable IPs from data centers, ideal for large-scale tasks but more prone to detection. ISP Proxies: Fast and reliable IPs from ISPs, combining the benefits of datacenter and residential proxies for lower detection risk.
+2. **Rotate IP Addresses**\
+   Use rotating proxies to distribute requests across multiple IP addresses. This reduces the risk of being detected and blocked by the target website.
+3. **Respect Website Policies**\
+   Always check the robots.txt file of the target website to understand their scraping policies. Respect rate limits and avoid scraping personal or sensitive information.
+4. **Implement Rate Limiting**\
+   Control the rate of your requests to avoid overwhelming the target server. Use techniques like randomized delays and rate limits to mimic human browsing behavior.
+5. **Use Proper Headers and User Agents**\
+   Mimic a real browser by setting appropriate HTTP headers and rotating user-agent strings. This helps in avoiding detection by anti-scraping mechanisms.
+6. **Error Handling and Retries**\
+   Implement robust error handling and retry mechanisms. This ensures that temporary network issues or minor blocks do not disrupt your scraping tasks.
+7. **Optimize Request Payload**\
+   Keep your requests light by only requesting the necessary data. This reduces the load on the target server and speeds up the scraping process.
+8. **Regularly Update Your Code**\
+   The web is dynamic, and websites frequently update their layouts and anti-scraping measures. Regularly update your scraping code to adapt to these changes.
+9. **Use a headless browser**\
+   Some targets may require Javascript rendering to be scraped successfully, in which case you might need to use a headless browser, like Selenium, Playwright, Puppeteer or any other to gather the content you require.
+
+Lastly, if you're still having issues successfully retrieving your desired data from your target, we recommend looking into our [WEB Scraping API](https://help.decodo.com/docs/web-scraping-api-introduction#/) as well as our[ Site Unblocker](https://help.decodo.com/docs/site-unblocker-quick-start).
