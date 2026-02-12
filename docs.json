@@ -157,7 +157,7 @@
               },
               {
                 "group": "您的 API 端点",
-                "openapi": "/api-reference/jero_public_api.yaml",
+                "openapi": "/api-reference/jero_public_api_cn.yaml",
                 "pages": [
                   "api-reference/*"
                 ]
