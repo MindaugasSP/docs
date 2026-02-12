@@ -30,6 +30,7 @@
           {
             "tab": "Guides",
             "pages": [
+              "best-scraping-practices",
               "protocols",
               "authentication",
               "residential",
