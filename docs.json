@@ -108,6 +108,7 @@
           {
             "tab": "指南",
             "pages": [
+              "cn/best-scraping-practices",
               "cn/authentication",
               "cn/protocols",
               "cn/residential",
