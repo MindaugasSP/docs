@@ -30,6 +30,7 @@
           {
             "tab": "Guides",
             "pages": [
+              "chapa",
               "test",
               "sapi-parameters",
               "best-scraping-practices",
