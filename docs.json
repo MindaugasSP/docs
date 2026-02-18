@@ -43,12 +43,18 @@
                   }
                 ]
               },
-              "sapi-parameters",
-              "best-scraping-practices",
               {
                 "group": "Web Scraping API",
                 "pages": [
-                  "untitled-page"
+                  "untitled-page",
+                  "sapi-parameters",
+                  {
+                    "group": "Target Templates",
+                    "pages": [
+                      "intro",
+                      "untitled-page"
+                    ]
+                  }
                 ]
               },
               {
@@ -85,7 +91,8 @@
                       "ai-tools/claude-code",
                       "ai-tools/windsurf"
                     ]
-                  }
+                  },
+                  "best-scraping-practices"
                 ]
               }
             ]
