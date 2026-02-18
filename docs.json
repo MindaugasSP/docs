@@ -56,7 +56,8 @@
                         "pages": [
                           "amazon-intro",
                           "untitled-page",
-                          "table-test"
+                          "table-test",
+                          "expandable-test"
                         ]
                       }
                     ]
