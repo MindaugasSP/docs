@@ -1,18 +1,19 @@
 ---
-title: 'Table test'
+title: "Table test"
+hidden: true
 ---
 
-| Parameter | Type | Required | Description |
-| :--- | :--- | :--- | :--- |
-| `target` | string | ✅ | Target type must be set to `amazon_sellers`. |
-| `query` | string | ✅ | Browse node ID or search query. Multi-word queries must be hyphen-separated, use "-" instead of spaces. |
-| `headless` | string | | `html` value enables JavaScript rendering. [**Read more.**](https://help.decodo.com/docs/web-scraping-api-javascript-rendering) |
-| `parse` | boolean | | Automatically parses results when set to `true`. Default value is `false`. |
-| `geo` | string | | Set the delivery location to use when submitting the query. [**Read more.**](tps://help.decodo.com/docs/web-scraping-api-amazon-locale#https://help.decodo.com/docs/web-scraping-api-amazon-locale#) |
-| `domain` | string | | Specify top-level domain. [**Read more.**](https://help.decodo.com/docs/web-scraping-api-amazon-locale) |
-| `locale` | string | | Set the value to change your Amazon web page interface language. [**Read more.**](https://help.decodo.com/docs/domain-localization#/) |
-| `currency` | string | | Set the currency. [**Read more**](https://help.decodo.com/docs/web-scraping-api-amazon-currency) |
-| `device_type` | string | | Specify device type and browser. [**Read more.**](https://help.decodo.com/docs/device-types#/) |
-| `page_from` | string | | Customize the starting page number. Default value is `1`. |
-| `xhr` | boolean | | Set to `true` to retrieve a list of XHR and fetch requests. [**Read more.**](https://help.decodo.com/docs/fetch-and-xhr#/) Default value is `false`. |
-| `markdown` | boolean | | Set to `true` to receive a Markdown response. [**Read more.**](https://help.decodo.com/docs/scraper-api-markdown#/) Default value is `false`. |
+| Parameter     | Type    | Required | Description                                                                                                                                                                                          |
+| :------------ | :------ | :------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `target`      | string  | ✅        | Target type must be set to `amazon_sellers`.                                                                                                                                                         |
+| `query`       | string  | ✅        | Browse node ID or search query. Multi-word queries must be hyphen-separated, use "-" instead of spaces.                                                                                              |
+| `headless`    | string  |          | `html` value enables JavaScript rendering. [**Read more.**](https://help.decodo.com/docs/web-scraping-api-javascript-rendering)                                                                      |
+| `parse`       | boolean |          | Automatically parses results when set to `true`. Default value is `false`.                                                                                                                           |
+| `geo`         | string  |          | Set the delivery location to use when submitting the query. [**Read more.**](tps://help.decodo.com/docs/web-scraping-api-amazon-locale#https://help.decodo.com/docs/web-scraping-api-amazon-locale#) |
+| `domain`      | string  |          | Specify top-level domain. [**Read more.**](https://help.decodo.com/docs/web-scraping-api-amazon-locale)                                                                                              |
+| `locale`      | string  |          | Set the value to change your Amazon web page interface language. [**Read more.**](https://help.decodo.com/docs/domain-localization#/)                                                                |
+| `currency`    | string  |          | Set the currency. [**Read more**](https://help.decodo.com/docs/web-scraping-api-amazon-currency)                                                                                                     |
+| `device_type` | string  |          | Specify device type and browser. [**Read more.**](https://help.decodo.com/docs/device-types#/)                                                                                                       |
+| `page_from`   | string  |          | Customize the starting page number. Default value is `1`.                                                                                                                                            |
+| `xhr`         | boolean |          | Set to `true` to retrieve a list of XHR and fetch requests. [**Read more.**](https://help.decodo.com/docs/fetch-and-xhr#/) Default value is `false`.                                                 |
+| `markdown`    | boolean |          | Set to `true` to receive a Markdown response. [**Read more.**](https://help.decodo.com/docs/scraper-api-markdown#/) Default value is `false`.                                                        |
