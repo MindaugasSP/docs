@@ -50,7 +50,14 @@
                   {
                     "group": "Target Templates",
                     "pages": [
-                      "intro"
+                      "intro",
+                      {
+                        "group": "Amazon",
+                        "pages": [
+                          "amazon-intro",
+                          "untitled-page"
+                        ]
+                      }
                     ]
                   }
                 ]
