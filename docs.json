@@ -31,30 +31,20 @@
             "tab": "Guides",
             "pages": [
               {
-                "group": "Titulinis",
-                "hidden": true,
+                "group": "Residential Proxies",
                 "pages": [
-                  "sdfsdf",
+                  "authentication",
+                  "protocols",
                   {
-                    "group": "Untitled Group",
+                    "group": "Advanced Parameters",
                     "pages": [
-                      {
-                        "group": "maža grupė",
-                        "pages": [
-                          "chipis"
-                        ]
-                      },
-                      "untitled-page"
+                      "awdawdadw"
                     ]
-                  },
-                  "awdawdadw"
+                  }
                 ]
               },
-              "chapa",
               "sapi-parameters",
               "best-scraping-practices",
-              "protocols",
-              "authentication",
               {
                 "group": "Getting started",
                 "pages": [
