@@ -46,6 +46,12 @@
               "sapi-parameters",
               "best-scraping-practices",
               {
+                "group": "Web Scraping API",
+                "pages": [
+                  "untitled-page"
+                ]
+              },
+              {
                 "group": "Other stuff",
                 "pages": [
                   {
