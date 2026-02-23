@@ -144,41 +144,76 @@
           {
             "tab": "指南",
             "pages": [
-              "cn/best-scraping-practices",
-              "cn/authentication",
-              "cn/protocols",
-              "cn/residential",
-              "cn/expandable-test",
               {
-                "group": "入门",
+                "group": "住宅代理",
                 "pages": [
-                  "index",
-                  "quickstart",
-                  "development"
+                  "cn/authentication",
+                  "cn/protocols",
+                  {
+                    "group": "高级参数",
+                    "pages": [
+                      "cn/awdawdadw"
+                    ]
+                  }
                 ]
               },
               {
-                "group": "自定义",
+                "group": "网页抓取 API",
                 "pages": [
-                  "essentials/settings",
-                  "essentials/navigation"
+                  "cn/sapi-parameters",
+                  {
+                    "group": "目标模板",
+                    "pages": [
+                      "cn/intro",
+                      {
+                        "group": "Amazon",
+                        "pages": [
+                          "cn/amazon-intro",
+                          "cn/untitled-page",
+                          "cn/table-test",
+                          "cn/expandable-test"
+                        ]
+                      }
+                    ]
+                  }
                 ]
               },
               {
-                "group": "编写内容",
+                "group": "其他内容",
                 "pages": [
-                  "essentials/markdown",
-                  "essentials/code",
-                  "essentials/images",
-                  "essentials/reusable-snippets"
-                ]
-              },
-              {
-                "group": "AI 工具",
-                "pages": [
-                  "ai-tools/cursor",
-                  "ai-tools/claude-code",
-                  "ai-tools/windsurf"
+                  {
+                    "group": "入门",
+                    "pages": [
+                      "index",
+                      "quickstart",
+                      "development"
+                    ]
+                  },
+                  {
+                    "group": "自定义",
+                    "pages": [
+                      "essentials/settings",
+                      "essentials/navigation"
+                    ]
+                  },
+                  {
+                    "group": "编写内容",
+                    "pages": [
+                      "essentials/markdown",
+                      "essentials/code",
+                      "essentials/images",
+                      "essentials/reusable-snippets"
+                    ]
+                  },
+                  {
+                    "group": "AI 工具",
+                    "pages": [
+                      "ai-tools/cursor",
+                      "ai-tools/claude-code",
+                      "ai-tools/windsurf"
+                    ]
+                  },
+                  "cn/best-scraping-practices"
                 ]
               }
             ]
