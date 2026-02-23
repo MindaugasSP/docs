@@ -1,5 +1,5 @@
 ---
-title: "Expandable test"
+title: "Expandable Test"
 ---
 
 <CodeGroup>
@@ -624,3 +624,30 @@ title: "Expandable test"
 </CodeGroup>
 
 ---
+
+```shellscript
+curl -U 'USERNAME:PASSWORD' -x gate.curl -U 'USERNAME:PASSWORD' -x gate.decodo.com:7000 https://ip.decodo.com/decodo.com:7000 https://ip.decodo.com/
+```
+
+```javascript
+const axios = require('axios');
+const { HttpsProxyAgent } = require('https-proxy-agent');
+
+const url = 'https://ip.decodo.com/json';
+const proxyAgent = new HttpsProxyAgent(
+  'http://username:password@gate.decodo.com:7000');
+
+axios
+  .get(url, {
+    httpsAgent: proxyAgent,
+  })
+  .then((response) => {
+    console.log(response.data);
+  });
+```
+
+<Steps>
+  <Step iconType="thin" stepNumber={2} title="value between 1 and 1440 by using the sessionduration parameter.">
+    value between **1** and **1440** by [using](www.decodo.com) the `sessionduration` parameter.
+  </Step>
+</Steps>
