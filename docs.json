@@ -148,6 +148,7 @@
               "cn/authentication",
               "cn/protocols",
               "cn/residential",
+              "cn/expandable-test",
               {
                 "group": "入门",
                 "pages": [
