@@ -1,0 +1,38 @@
+---
+title: 'Sapi 参数'
+---
+
+# 参数
+
+网页抓取 API 参数
+
+## 网页抓取 API 解决方案支持的参数
+
+<Callout icon="📘" theme="info">
+  核心版和高级版用户支持的参数有所不同。在**[此处](https://help.decodo.com/docs/web-scraping-api-core-and-advanced-plans/)**查找更详细的比较。
+
+  请注意，支持的参数可能会因目标模板而略有不同。[了解更多](https://help.decodo.com/docs/web-scraping-api-targets#/)。
+</Callout>
+
+| 参数 | 默认值 | 描述 | 示例 | 核心版 |
+|-----------|---------------|-------------|---------|---------|
+| `url` 或 `query` | `null` | 必填。某些[**目标模板**](https://help.decodo.com/docs/web-scraping-api-targets)支持 `query` 参数，否则需要 `url`。 | `https://ip.decodo.com` | ✅ 仅支持 `url` |
+| `target` | `null` | 特定[**目标模板**](https://help.decodo.com/docs/web-scraping-api-targets#/)所需 | `google_search` | |
+| `headless` | `null` 某些目标模板默认强制 JS 渲染 | `html` 值启用 JavaScript 渲染。[了解更多。](https://help.decodo.com/docs/web-scraping-api-javascript-rendering) `png` 值启用截图响应。[了解更多。](https://help.decodo.com/docs/screenshot) | `html` | |
+| `geo` | 自动随机化 | 结果所依赖的地理位置。[**了解更多**](https://help.decodo.com/docs/web-scraping-api-localisation)。 | `United States` | ✅ 支持的地理位置：`US`、`CA`、`GB`、`DE`、`FR`、`NL`、`JP`、`RO` |
+| `domain` | `com` | 指定顶级域名：**com**、**co.uk**、**fr** 等。 | `com` | |
+| `locale` | 与 `domain` 参数匹配 | 这将更改搜索页面的网页界面语言（而非结果）。示例：– en-US – en-GB | `en-gb` | |
+| `headers` | `null` | 向目标请求添加请求头。 | `User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/<IP_ADDRESS> Safari/537.36` | |
+| `cookies` | `null` | 客户端 cookie。允许用户像已登录一样打开页面。 | `Cookie: sessionid=8e1f3b56-7abc-47e6-b2e2-1d273b0a1c4d; logged_in=true; locale=en-US` | |
+| `force_cookies` | `false` | 默认情况下，用户提供的 cookie 不会转发到目标。将此参数设置为 `true` 以覆盖此行为。 | `true` | |
+| `force_headers` | `false` | 默认情况下，用户提供的请求头不会转发到目标。将此参数设置为 `true` 以覆盖此行为。 | `true` | |
+| `device_type` | `desktop` | 设备类型和浏览器。[了解更多。](https://help.decodo.com/docs/device-types#/) | `desktop` | |
+| `parse` | `false` | 对于某些目标模板，提供专用解析器。要检索结构化数据，请将 `parse` 参数设置为 `true`。[了解更多。](https://help.decodo.com/update/docs/web-scraping-api-parsing#/) | `true` | |
+| `session_id` | `null` | 会话，用于在最多 10 分钟内为多个请求重用相同的 IP | `1234` | |
+| `http_method` | `GET` | 用于发出 `POST` 请求而不是 `GET`。 | `POST` | ✅ |
+| `payload` | `null` | Base64 编码的 `POST` 请求正文。当 `http_method` 为 `POST` 时使用。 | `{foo: bar}` | ✅ |
+| `successful_status_codes` | `null` | 定义一个或多个您认为成功并希望获取其内容的 `HTTP` 响应代码。 | `401`、`404` | ✅ |
+| `markdown` | `false` | 将 HTML 输出解析为 Markdown。在将结果输入 LLM 模型时可减少令牌数。[了解更多。](https://help.decodo.com/docs/scraper-api-markdown#/) | `true` | |
+| `xhr` | `false` | 检索 XHR 和 fetch 请求列表。[了解更多。](https://help.decodo.com/docs/fetch-and-xhr#/) | `true` | |
+
+***
