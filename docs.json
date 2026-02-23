@@ -147,8 +147,11 @@
               {
                 "group": "住宅代理",
                 "pages": [
+                  "cn/best-scraping-practices",
                   "cn/authentication",
                   "cn/protocols",
+                  "cn/residential",
+                  "cn/test",
                   {
                     "group": "高级参数",
                     "pages": [
