@@ -1,0 +1,280 @@
+---
+title: '您好'
+---
+
+
+
+# 使用统计
+
+移动代理流量使用统计 
+
+移动代理流量使用详情可以在您的仪表板统计页面上找到。只需通过仪表板左侧面板导航到移动代理页面，然后点击**[使用统计](https://dashboard.decodo.com/mobile-proxies/statistics?)**部分。
+
+<Callout icon="📘" theme="info">
+  如果您想了解流量是如何计算的，请前往**[流量使用](https://help.decodo.com/docs/traffic-usage)**。
+</Callout>
+
+***
+
+## 统计数据折线图
+
+您将看到一个折线图，显示您使用代理发送的总**流量**或**请求**。
+
+<Callout icon="📘" theme="info">
+  使用数据每 10 到 15 分钟更新一次。统计数据以 UTC 时区提供。
+</Callout>
+
+* 在**流量**折线图中，纵轴显示使用的流量（以 `MB` 和/或 `GB` 为单位），而横轴显示您分组的时间。
+* 您可以将鼠标悬停在折线图中的数据点上，以查看所选时间的详细使用情况。
+
+<Image align="center" border={false} caption="流量使用统计。" src="https://files.readme.io/27fbdafe0b6680ef33eb214e880f0bd664f89ad152dc5fe9b1aaedba2bcd2c1b-Group_427323587_1.png" />
+
+<br />
+
+* 在**请求**折线图中，纵轴显示使用代理发送的请求数量，而横轴显示您分组的时间。
+* 您可以将鼠标悬停在折线图中的数据点上，以查看所选时间的详细使用情况。
+
+<Image align="center" border={false} caption="请求使用统计。" src="https://files.readme.io/a3497389d1e2993dddfdbadce876b3b68a45f6f62ea5c67213b493a973e1faa8-Group_427323588_2.png" />
+
+<br />
+
+1. 您可以选择按**位置**、代理**用户**、**目标**、**协议**对数据进行排序。
+2. 您还可以按**小时**、**天**、**周**或**月**对数据进行分组。
+
+<Callout icon="📘" theme="info">
+  流量历史记录最多保留 180 天。
+</Callout>
+
+<Image align="center" border={false} caption="使用统计中的过滤。" src="https://files.readme.io/32e47fb88b211c1bb3896b01aa4edc0e4a12cada7891e43b83959145f5952734-Group_427323589.png" />
+
+***
+
+## 统计数据表
+
+在折线图下方，您可以查看汇总使用代理的流量的数据表。
+
+1. 您可以找到**日期**、**流量使用**、**下载**和**上传**流量（以 `MB` 或 `GB` 为单位）。接下来的两列描述了**请求**数量和**支出**。**支出**是相当于使用流量的美元成本。
+2. 您可以直接导出表格数据或以以下文件格式导出原始数据：`.CSV`、`.TXT` 或 `.JSON`。您还可以将数据复制到剪贴板。
+
+<Image align="center" border={false} caption="使用统计数据表。" src="https://files.readme.io/a1447e3c902cf25a20a7084d2642120fcf1ca2b91ff3fc246af9be21188a0363-Group_427323590.png" />
+
+<br />
+
+以下是三个额外的数据表：**热门目标**、**热门国家**和**热门用户**。
+
+### 热门目标
+
+在**热门目标**表中，您可以看到您使用代理访问的目标域，按总流量消耗降序排列。
+
+1. 您还可以找到**编号**、**目标**、**流量**、**请求**和**支出**列。
+2. 要查看完整的目标列表，请点击表格右上角的**所有目标列表**按钮。
+
+   * 在那里，您可以按关键字搜索整个列表。
+
+   <Image align="center" border={false} caption="热门目标详细数据表窗口。" src="https://files.readme.io/4b12d64b6fb303af0c98556766c94dbc0977730c89ca54d56e3919643483c0ca-Group_427323591.png" />
+3. 您可以直接导出表格数据或以以下文件格式导出原始数据：`.CSV`、`.TXT` 或 `.JSON`。您还可以将数据复制到剪贴板。
+
+<Image align="center" border={false} caption="热门目标数据表。" src="https://files.readme.io/bc5ecf1502637f55b8b3c8ce271501e3dcc67b398125c2819e4321abd6bafc3b-Group_427323592.png" />
+
+***
+
+### 热门国家
+
+在**热门国家**表中，您可以看到您使用代理定位的国家，按总流量消耗降序排列。
+
+1. 您还可以找到**国家**、**流量**、**请求**和**支出**列。
+2. 要查看完整的目标列表，请点击表格右上角的**所有国家列表**按钮。
+
+   * 在那里，您可以按关键字搜索整个列表。
+
+   <Image align="center" border={false} caption="热门国家详细数据表窗口。" src="https://files.readme.io/4a5991c495ea2e5a8854eb166519a424934875426461879ca0ab8f8862bdc3ed-Group_427323593.png" />
+3. 您可以直接导出表格数据或以以下文件格式导出原始数据：`.CSV`、`.TXT` 或 `.JSON`。您还可以将数据复制到剪贴板。
+
+<Image align="center" border={false} caption="热门国家数据表。" src="https://files.readme.io/e0c5fb7af14de515101527468646315814570ed54f8810cb05febfba2c196e0c-Group_427323594.png" width="50% " />
+
+<Callout icon="🚧" theme="warn">
+  目前，基于其他代理参数（如城市、美国州、ASN 和邮政编码）的统计数据不适用于移动代理。
+</Callout>
+
+***
+
+### 热门用户
+
+在**热门用户**表中，您可以看到代理用户和白名单 IP 的使用流量，从高到低排序。
+
+<Callout icon="📘" theme="info">
+  通过**白名单 IP** 方法进行**身份验证**时生成的代理流量是**聚合的**。这意味着无法按不同的白名单 IP 对使用流量进行排序。
+</Callout>
+
+1. 您还可以找到**用户**、**流量**、**请求**和**支出**列。
+2. 要查看完整的目标列表，请点击表格右上角的**所有用户列表**按钮。
+
+   * 在那里，您可以按关键字搜索整个列表。
+
+   <Image align="center" border={false} caption="热门用户详细数据表窗口。" src="https://files.readme.io/31c9f3edf03f0eb9c62ad7e3df701572a71029e5f5722a1110b015c70e06bc00-Group_427323595.png" />
+3. 您可以直接导出表格数据或以以下文件格式导出原始数据：`.CSV`、`.TXT` 或 `.JSON`。您还可以将数据复制到剪贴板。
+
+<Image align="center" border={false} caption="热门用户数据表。" src="https://files.readme.io/94b60aaf01edeff964c490b3e434274e16ab09400dfc3ac88db3e0033b030f6b-Group_427323596_1.png" width="50% " />
+
+***
+
+## API
+
+您还可以通过**[API](https://help.decodo.com/reference/public-api-key-authentication)** 免费检索代理流量和使用详情。
+
+### 获取流量
+
+以下 `POST` 端点将允许您接收使用的流量信息：
+
+`https://api.decodo.com/api/v2/statistics/traffic`
+
+您可以根据您希望接收的流量调整请求参数。要查找所有请求参数的列表，请前往**[获取流量](https://help.decodo.com/reference/get-traffic)** API 文档页面。
+
+在链接的 API 文档页面中，还有各种编程语言的请求示例。此外，您可以通过在调整**正文参数**部分后在右侧的**授权**字段中输入您的 API 密钥来测试请求。
+
+以下是通过**获取流量**端点的 `cURL` 请求示例。如果您想尝试该请求，请确保在第 3 行中替换 `<your_authorization_API_key>`。
+
+```curl
+curl --request POST \
+     --url https://api.decodo.com/api/v2/statistics/traffic \
+     --header 'Authorization: <your_authorization_API_key>' \
+     --header 'accept: application/json' \
+     --header 'content-type: application/json' \
+     --data '
+{
+  "proxyType": "mobile_proxies",
+  "startDate": "2026-01-01 00:00:00",
+  "endDate": "2026-01-03 00:00:00",
+  "groupBy": "day",
+  "limit": 500,
+  "page": 1,
+  "sortBy": "grouping_key",
+  "sortOrder": "asc"
+}
+'
+```
+
+以下是前一个请求的输出。
+
+```curl Result
+{
+  "metadata": {
+    "total_items": 12,
+    "total_pages": 1,
+    "current_page": 1,
+    "sort_by": "grouping_key",
+    "sort_order": "asc",
+    "totals": {
+      "total_rx": 156807236,
+      "total_tx": 43852368,
+      "total_rx_tx": 200659604,
+      "requests": 2363,
+      "unsuccessful_requests": 0,
+      "response_time": 0,
+      "success_rate": 0
+    },
+    "limit": 100
+  },
+  "data": [
+    {
+      "key": "2026-01-01 00:00:00",
+      "rx_bytes": 8063533,
+      "tx_bytes": 246389,
+      "rx_tx_bytes": 8309922,
+      "requests": 80
+    },
+    {
+      "key": "2026-01-02 00:00:00",
+      "rx_bytes": 144899450,
+      "tx_bytes": 43572701,
+      "rx_tx_bytes": 188472151,
+      "requests": 2279
+    },
+    {
+      "key": "2026-01-03 00:00:00",
+      "rx_bytes": 3844253,
+      "tx_bytes": 33278,
+      "rx_tx_bytes": 3877531,
+      "requests": 4
+    }
+  ]
+}
+```
+
+<br />
+
+### 获取目标
+
+以下 `POST` 端点将允许您接收您使用代理访问的目标网站列表：
+
+`https://api.decodo.com/api/v2/statistics/targets`
+
+您可以根据您希望接收的目标调整请求参数。要查找所有请求参数的列表，请前往**[获取目标](https://help.decodo.com/reference/get-targets)** API 文档页面。
+
+在链接的 API 文档页面中，还有各种编程语言的请求示例。此外，您可以通过在调整**正文参数**部分后在右侧的**授权**字段中输入您的 API 密钥来测试请求。
+
+以下是通过**获取目标**端点的 `cURL` 请求示例。如果您想尝试该请求，请确保在第 3 行中替换 `<your_authorization_API_key>`。
+
+```curl
+curl --request POST \
+     --url https://api.decodo.com/api/v2/statistics/targets \
+     --header 'Authorization: <your_authorization_API_key>' \
+     --header 'accept: application/json' \
+     --header 'content-type: application/json' \
+     --data '
+{
+  "startDate": "2026-01-01 00:00:00",
+  "endDate": "2026-01-26 00:00:00",
+  "proxyType": "mobile_proxies"
+}
+'
+```
+
+以下是前一个请求的输出。
+
+```curl Result
+{
+  "metadata": {
+    "total_items": 5,
+    "total_pages": 1,
+    "current_page": 1,
+    "totals": {
+      "total_rx": 0,
+      "total_tx": 0,
+      "total_rx_tx": 0,
+      "requests": 0,
+      "unsuccessful_requests": 0,
+      "response_time": 0,
+      "success_rate": 0
+    },
+    "limit": 0
+  },
+  "data": {
+    "targets": [
+      "ads.mozilla.org",
+      "detectportal.firefox.com",
+      "filebin.net",
+      "incoming.telemetry.mozilla.org",
+      "ip.decodo.com"
+ 		]
+  }
+}
+```
+
+***
+
+## 统计中无法识别的使用情况
+
+### 不熟悉的目标网站
+
+如果您在统计页面上看到不熟悉的目标，请记住它可能是您定位的网站的**子域**。这意味着目标网站使用子域来组织内容或服务的不同部分。仪表板也会**跟踪**这些**子域**。
+
+### 意外的流量消耗
+
+* 如果您注意到代理的流量使用量较高，请注意，流量可能是在您使用代理时在**后台**运行和更新的**应用程序**消耗的。
+* 此外，**目标****网站**可能已**更改**并引入了新**内容**，这将影响代理流量。
+* 通常，建议定期为您的**代理用户**生成新**密码**。
+* 使用完代理后，不要忘记**关闭**您用于运行代理的**工具**或**程序**。
+
+查看**[高流量使用](https://help.decodo.com/docs/high-traffic-usage)**以更详细地了解流量差异。
+
