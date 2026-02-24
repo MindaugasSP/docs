@@ -2,6 +2,32 @@
 title: "可展开测试"
 ---
 
+```shellscript cURL
+curl -U 'USERNAME:PASSWORD' -x gate.curl -U 'USERNAME:PASSWORD' -x gate.decodo.com:7000 https://ip.decodo.com/decodo.com:7000 https://ip.decodo.com/
+```
+
+```javascript Node
+const axios = require('axios');
+const { HttpsProxyAgent } = require('https-proxy-agent');
+
+const url = 'https://ip.decodo.com/json';
+const proxyAgent = new HttpsProxyAgent(
+  'http://username:password@gate.decodo.com:7000');
+
+axios
+  .get(url, {
+    httpsAgent: proxyAgent,
+  })
+  .then((response) => {
+    console.log(response.data);
+  });
+```
+
+<Steps>
+  <Step iconType="thin" stepNumber={2} title="使用 sessionduration 参数设置 1 到 1440 之间的值。">
+    使用 `sessionduration` 参数设置 **1** 到 **1440** 之间的[值](www.decodo.com)。
+  </Step>
+</Steps>
 <CodeGroup>
 
 ```json JSON expandable
